@@ -1,3 +1,4 @@
+import { WebsitesSidebarComponent } from './websites/websites-sidebar.component';
 import { IntroPreviewComponent } from './home/intro-preview.component';
 
 import { IntroComponent } from './home/intro.component';
@@ -9,7 +10,6 @@ import { AppComponent } from "./app.component";
 import {HttpModule} from "@angular/http";
 import {WebsitesComponent} from "./websites/websites.component"
 import {AboutComponent} from "./about/about.component"
-
 @NgModule({
     declarations: [
         AppComponent,
@@ -17,7 +17,8 @@ import {AboutComponent} from "./about/about.component"
         WebsitesComponent,
         IntroComponent
         ,IntroPreviewComponent,
-        AboutComponent
+        AboutComponent,
+        WebsitesSidebarComponent
          ],
     imports: [BrowserModule,
     routing,
