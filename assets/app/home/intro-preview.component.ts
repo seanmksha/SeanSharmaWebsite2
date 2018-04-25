@@ -7,6 +7,12 @@ import { AfterViewInit } from '@angular/core';
     templateUrl:'intro-preview.component.html'
 })
 export class IntroPreviewComponent implements AfterViewInit{
+    images=[
+        `/images/krystowers/krystowers700x330.png`,
+        `/images/stockmarketsearcher/preview700x330.png`,
+        `/images/emaily/emaily700x330.jpg`,
+        `/images/Polyseum/Polyseum700x330.jpg`
+    ];
     ngAfterViewInit() {
         $(".intro-item img").hover(
             function(){

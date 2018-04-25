@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="d-none d-md-block col-md-2">
+        <projects-sidebar></projects-sidebar>
+    </div>
+    <div class="d-none d-md-block col-md-1">
+    </div>
+    <div class="col-sm-12 col-md-8">
+            <div class="mainContainer">
+                <a [routerLink]="['/']">Home</a> >> <a [routerLink]="['/Projects']">Projects</a> >> <a [routerLink]="['/Projects/Stock-Market-Searcher-Android']">{{header}}</a>
+                <br>
+                <h1>{{header}}</h1>
+                <br>
+                <div class="headerContainer">
+                        <img src="{{images[1]}}"> 
+                </div>
+                <br>
+                <p>The android application communicates with a backend webserver (Java to PHP).  The application does all the front-end GUI displays.  All of the information is gathered from 3rd party APIs via a PHP page hosted on google cloud.</p>
+                
+               <p>Some features included: </p>
+                <ul>
+                  <li>Saving favorites and loading up the stock statistics for each favorite on startup</li>
+                    <li>Charts on past stock history</li>
+                  <li>News feed related to the searched stock (available by Bing)</li>
+                  <li>Autocomplete which searches through stock names</li>
+                  <li>Autorefresh which updates the data every few seconds</li>
+                </ul>
+               
+        </div>
+        </div>
+    </div>

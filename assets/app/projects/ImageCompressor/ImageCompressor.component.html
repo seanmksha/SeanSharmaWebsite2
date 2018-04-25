@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="d-none d-md-block col-md-2">
+        <projects-sidebar></projects-sidebar>
+    </div>
+    <div class="d-none d-md-block col-md-1">
+    </div>
+    <div class="col-sm-12 col-md-8">
+            <div class="mainContainer">
+                <a [routerLink]="['/']">Home</a> >> <a [routerLink]="['/Projects']">Projects</a> >> <a [routerLink]="['/Projects/Image-Compressor']">{{header}}</a>
+                <br>
+                <h1>{{header}}</h1>
+                <br>
+                <div class="headerContainer">
+                        <img src="{{images[1]}}">
+                </div>
+                <p>The program takes an uncompressed RGB files. Performs a Discrete Cosine Transform similar to the one used in JPEG Compression uses on 8x8 sub-blocks. </p>
+                <p>Performs a Discrete Wavelet Transform on the entire images used in JPEG2000 achieving better compression than the original JPEG compression.  Shows results side by side through different quality inputs.  
+              </p>
+              
+              <b>Encoding</b>
+              <p>
+        For the DCT conversion, it breaks up the image into 8x8 contiguous blocks or 64 pixels each and then perform a DCT for each block for each channel. For the DWT conversion, it converts each row (for each channel) into low pass and high pass coefficients followed by the same for each column applied to the output of the row processing. It recurses on the same row then column sequence on the remaining low pass coefficients till the end. 
+        
+        
+        </p>
+              <b>Decoding</b>
+              <p>
+        Based on the input parameter of the number of coefficients to use, the program appropriately decodes by zeroing out the unrequested coefficients (just setting the coefficients to zero) and then perform an IDCT or an IDWT.
+        The exact coefficients to zero out are different for both cases and explained next.
+              </p>
+              
+              <p>
+        For a DCT, the program selects the first m coefficients in a zig order for each 8x8 block such that m = round(n/4096) where n is the number of coefficients given as input. 4096 is the number of 8x8 blocks in a 512x512 image. Thus, m represents the first few coefficients to use for each 8x8 block during decoding. For example for n=131072, the program will use m = round(131072/4096) = 32. Each block will be decoded using the first 32 coefficients in zigzag order. The remaining can be set to zero prior to decoding. For the third test run above (n=16384), the program will use m = round (16384/4096) = 4. 
+        
+        For a DWT, the program selects the first n coefficients in a zig zag order for the image where n is the number of coefficients given as input. DWT encodes the entire image so, here it will use the first n coefficients in zig zag order.</p>
+            <div class="divide10"></div>
+        </div>
+        </div>
+    </div>

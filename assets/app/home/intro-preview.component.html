@@ -2,26 +2,12 @@
 </div>
 <div class="previewContainer">
 <div class="row">
-    <div class="col-md-3">
-        <div class="intro-item">
-            <img src="/images/krystowers700x330.png">
-        </div>
+        <div class="col-md-3" *ngFor="let element of images">
+         <div class="intro-item">
+                <img src="{{element}}">
+            </div>
+        
     </div>
-    <div class="col-md-3">
-        <div class="intro-item">
-                <img src="/images/emaily700x330.jpg">    
-        </div> 
-    </div>
-    <div class="col-md-3">
-            <div class="intro-item">
-                <img src="/images/restaurant700x330.jpg">
-            </div>        
-    </div>
-    <div class="col-md-3">
-            <div class="intro-item">
-                    <img src="/images/preview700x330.png">
-                    
-            </div> 
-    </div>
+  
 </div>
 </div>

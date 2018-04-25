@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="d-none d-md-block col-md-2">
+        <projects-sidebar></projects-sidebar>
+    </div>
+    <div class="d-none d-md-block col-md-1">
+    </div>
+    <div class="col-sm-12 col-md-8">
+            <div class="mainContainer">
+                <a [routerLink]="['/']">Home</a> >> <a [routerLink]="['/Projects']">Projects</a> >> <a [routerLink]="['/Projects/Video-Highlight-Creator']">{{header}}</a>
+                <br>
+                <h1>{{header}}</h1>
+                <br>
+                <div class="headerContainer">
+                        <img src="{{images[1]}}">
+                </div>
+                <br>
+                <p>The program reads in a sequence of rgb files creating a video then creates a new video cutting off the uninteresting parts.  The first step was to read the files into a GUI and make a basic video player for the files.</p>
+                <p>Broad-phase: For the first pass all of the frames were subject to an entropy difference test.  The normal levels of entropy change were evaluated, and if the difference amounted to over a threshold then the scene was labeled as potentially interesting.</p>
+                  <p>Narrow-phase: For all of the potentially interesting scenes, 8x8 macro blocks were used to calculate which other color distribution of 8x8 blocks averaged to the closest representative in the next frame within 16 macro blocks. If it matched one reasonably then that means the object represented in the 8x8 block moved to that location.  If it didn't that means that the object disappeared, there was extreme movement, or there was a scene change.  The chances of there being such big movement in a one frame difference is very low so that possibility was ignored.  If the movement vectors were in a top percentile, then that means there were consecutive scenes with a lot of action, meaning that it was chosen as a highlight.
+                    
+                  </p>
+                  <p>
+                  All of the entropy and movement vector information is serialized into a file.  Inputting an rgb file that repesents a scene in the movie.  The video highlighter could match it with the scene it was in by comparing the processed metadata's color distribution or entropy.
+                  </p>
+        </div>
+        </div>
+    </div>
