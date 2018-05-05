@@ -34,6 +34,9 @@ body {
     background-size:80% auto;
     max-width:100%;
 }
+.sidebar .nav-link{
+    color:white;
+}
 html,body
 {
     width: 100%;
@@ -98,12 +101,31 @@ html,body
     padding-left:50px;
     padding-right:50px;
 }
+
 .nav-link{
+    font-size:14px;
+    text-transform: uppercase;
+    letter-spacing:0.6px;
+    font-weight:200;
+}
+.sidebar .nav-link h1{
+font-size:25px;
+}
+.sidebar .nav-link{
+    text-transform:none !important;
+    font-size:14px;
+}
+.nav-link{
+    font-family: 'Open Sans', sans-serif;
+  
 
     margin-left:5px;
     margin-right:5px;
     transition: color 0.2s linear;
     color:$navbar-link-color
+}
+.active .nav-link{
+   color:rgb(138, 186, 138);
 }
 .nav-link:hover{
     color:$navbar-link-hover;
@@ -233,9 +255,7 @@ padding-right:10px;}
     margin-left:10px;
     border:1px solid rgba(0,0,0,1);
 }
-.sidebar .nav-link{
-    color:white;
-}
+
 .nav-link:hover,a:hover{
     color:rgb(90, 113, 0);
     text-decoration:none;
@@ -251,4 +271,26 @@ padding-right:10px;}
 .sidebar h1{
     margin-left:-10px;
     font-size:25px;
+}
+.footer{
+    margin-top:300px;
+    padding-top:30px;
+    padding-bottom:20px;
+  border-top:1px solid black;
+    color:white;
+    background-color:rgb(10,10,10);
+}
+@media screen and (max-width: 781px) {
+    .footer{
+        margin-top:100px;
+    }
+}
+.sidebar{
+    position:fixed;
+}
+.contact{
+    color:rgb(255, 68, 0);
+}
+.footer p{
+  text-align:center;
 }

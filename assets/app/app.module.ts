@@ -1,3 +1,4 @@
+import { FooterComponent } from './MainSections/Footer.component';
 import { PreviewMainComponent } from './MainSections/PreviewMain.component';
 import { SandBoxComponent } from './about/sandbox.component';
 import { VideoHighlightComponent } from './projects/VideoHighlights/VideoHighlights.component';
@@ -54,7 +55,8 @@ import {AboutComponent} from "./about/about.component"
         StockMarketSearcherAndroidComponent,
         VideoHighlightComponent,
         SandBoxComponent,
-        PreviewMainComponent
+        PreviewMainComponent,
+        FooterComponent
          ],
     imports: [BrowserModule,
     routing,
