@@ -1,3 +1,4 @@
+import { ResumeComponent } from './Resume/Resume.component';
 import { SandBoxComponent } from './about/sandbox.component';
 import { VideoHighlightComponent } from './projects/VideoHighlights/VideoHighlights.component';
 import { StockMarketSearcherAndroidComponent } from './projects/StockMarketSearcherAndroid/StockMarketSearcherAndroid.component';
@@ -41,7 +42,8 @@ import {WebsitesComponent} from './websites/websites.component';
     {path:'Projects/Image-Compressor',component:ImageCompressorComponent},
     {path:'Projects/Stock-Market-Searcher-Android',component:StockMarketSearcherAndroidComponent},
     {path:'Projects/Video-Highlight-Creator',component:VideoHighlightComponent},
-    {path:'SandBox',component:SandBoxComponent}
+    {path:'SandBox',component:SandBoxComponent},
+    {path:'Resume',component:ResumeComponent}
     
     
 ];

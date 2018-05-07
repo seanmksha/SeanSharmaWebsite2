@@ -1,3 +1,4 @@
+import { ResumeComponent } from './Resume/Resume.component';
 import { FooterComponent } from './MainSections/Footer.component';
 import { PreviewMainComponent } from './MainSections/PreviewMain.component';
 import { SandBoxComponent } from './about/sandbox.component';
@@ -56,7 +57,8 @@ import {AboutComponent} from "./about/about.component"
         VideoHighlightComponent,
         SandBoxComponent,
         PreviewMainComponent,
-        FooterComponent
+        FooterComponent,
+        ResumeComponent
          ],
     imports: [BrowserModule,
     routing,

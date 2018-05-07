@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {getClosedIntervals,getSubStrings} from "./sandbox2";
 @Component({
     selector:'app-sandbox',
     templateUrl:'sandbox.component.html'
