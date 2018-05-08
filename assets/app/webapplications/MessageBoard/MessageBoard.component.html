@@ -1,17 +1,17 @@
 <div class="row">
-        <div class="d-none d-md-block col-md-2">
-            <webapplications-sidebar></webapplications-sidebar>
-        </div>
-        <div class="d-none d-md-block col-md-1">
-        </div>
-        <div class="col-sm-12 col-md-8">
+    <div class="d-none d-lg-block col-lg-2">
+        <webapplications-sidebar></webapplications-sidebar>
+    </div>
+    <div class="d-none d-lg-block col-lg-1">
+    </div>
+    <div class="col-md-12 col-lg-8">
                 <div class="mainContainer">
                     <a [routerLink]="['/']">Home</a> >> <a [routerLink]="['/Web-Applications']">Web Applications</a> >> <a [routerLink]="['/Web-Applications/Message-Board']"> Message Board</a>
                     <br>
                     <h1>Message Board</h1>
                     <br>
                     <div class="headerContainer">
-                        <img src="/images/messageboard/MessageBoard700x330.jpg">
+                        <img [ngClass]="['width500']" src="/images/messageboard/MessageBoard700x330.jpg">
                 </div>
                     <br>
                     <p>Message Board is a message board system where user's can register and post messages.  They can edit or delete them if they were the one that originally created the message.</p>

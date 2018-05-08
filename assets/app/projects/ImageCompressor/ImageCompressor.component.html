@@ -1,17 +1,17 @@
 <div class="row">
-    <div class="d-none d-md-block col-md-2">
+    <div class="d-none d-lg-block col-lg-2">
         <projects-sidebar></projects-sidebar>
     </div>
-    <div class="d-none d-md-block col-md-1">
+    <div class="d-none d-lg-block col-lg-1">
     </div>
-    <div class="col-sm-12 col-md-8">
+    <div class="col-md-12 col-lg-8">
             <div class="mainContainer">
                 <a [routerLink]="['/']">Home</a> >> <a [routerLink]="['/Projects']">Projects</a> >> <a [routerLink]="['/Projects/Image-Compressor']">{{header}}</a>
                 <br>
                 <h1>{{header}}</h1>
                 <br>
                 <div class="headerContainer">
-                        <img src="{{images[1]}}">
+                        <img class="width500" src="{{images[1]}}">
                 </div>
                 <p>The program takes an uncompressed RGB files. Performs a Discrete Cosine Transform similar to the one used in JPEG Compression uses on 8x8 sub-blocks. </p>
                 <p>Performs a Discrete Wavelet Transform on the entire images used in JPEG2000 achieving better compression than the original JPEG compression.  Shows results side by side through different quality inputs.  

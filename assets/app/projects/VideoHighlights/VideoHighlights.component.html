@@ -1,17 +1,17 @@
 <div class="row">
-    <div class="d-none d-md-block col-md-2">
+    <div class="d-none d-lg-block col-lg-2">
         <projects-sidebar></projects-sidebar>
     </div>
-    <div class="d-none d-md-block col-md-1">
+    <div class="d-none d-lg-block col-lg-1">
     </div>
-    <div class="col-sm-12 col-md-8">
+    <div class="col-md-12 col-lg-8">
             <div class="mainContainer">
                 <a [routerLink]="['/']">Home</a> >> <a [routerLink]="['/Projects']">Projects</a> >> <a [routerLink]="['/Projects/Video-Highlight-Creator']">{{header}}</a>
                 <br>
                 <h1>{{header}}</h1>
                 <br>
                 <div class="headerContainer">
-                        <img src="{{images[1]}}">
+                        <img class="width500"src="{{images[1]}}">
                 </div>
                 <br>
                 <p>The program reads in a sequence of rgb files creating a video then creates a new video cutting off the uninteresting parts.  The first step was to read the files into a GUI and make a basic video player for the files.</p>

@@ -1,17 +1,17 @@
 <div class="row">
-    <div class="d-none d-md-block col-md-2">
+    <div class="d-none d-lg-block col-lg-2">
         <projects-sidebar></projects-sidebar>
     </div>
-    <div class="d-none d-md-block col-md-1">
+    <div class="d-none d-lg-block col-lg-1">
     </div>
-    <div class="col-sm-12 col-md-8">
+    <div class="col-md-12 col-lg-8">
             <div class="mainContainer">
                 <a [routerLink]="['/']">Home</a> >> <a [routerLink]="['/Projects']">Projects</a> >> <a [routerLink]="['/Projects/Search-Engine']">{{header}}</a>
                 <br>
                 <h1>{{header}}</h1>
                 <br>
                 <div class="headerContainer">
-                        <img src="{{images[1]}}">
+                        <img class="width500" src="{{images[1]}}">
                 </div>
                 <b>Web Crawler</b>
     <p>The web crawler uses crawler4j to gather statistics off of websites.  It reads the robots.txt and uses HTTP Requests to gather information.In this case it's gathering file sizes, http statuses encounter, content types, unique links, links, and outgoing links off of websites.  It also downloads the webpages found that are html file types so that we can index them.</p>
