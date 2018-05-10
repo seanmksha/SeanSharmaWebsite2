@@ -29,7 +29,7 @@ import { AppComponent } from "./app.component";
 import {HttpModule} from "@angular/http";
 import {WebsitesComponent} from "./websites/websites.component"
 import {AboutComponent} from "./about/about.component"
-
+import {ContactComponent} from "./Contact/contact.component";
 @NgModule({
     declarations: [
         AppComponent,
@@ -58,7 +58,8 @@ import {AboutComponent} from "./about/about.component"
         SandBoxComponent,
         PreviewMainComponent,
         FooterComponent,
-        ResumeComponent
+        ResumeComponent,
+        ContactComponent
          ],
     imports: [BrowserModule,
     routing,

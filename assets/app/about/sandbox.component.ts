@@ -1,10 +1,67 @@
 import {Component} from "@angular/core";
-import {getClosedIntervals,getSubStrings} from "./sandbox2";
+
 @Component({
     selector:'app-sandbox',
     templateUrl:'sandbox.component.html'
 })
 export class SandBoxComponent{
+
+getClosedIntervals=function(){
+    
+    function combineIntervals(addedInterval,intervals){
+        var result=[];
+        var i=0;
+        var start=addedInterval.sp;
+        var end = addedInterval.ep;
+        var overlapped=false;
+        //0 2
+        //-6,4
+        while(i<intervals.length){
+            var current= intervals[i];
+            if((addedInterval.sp<=current.ep&& addedInterval.sp>=current.sp)||(addedInterval.ep<=current.ep)&&
+            (addedInterval.ep>=current.sp)||(addedInterval.sp<=current.sp&&addedInterval.ep>=current.ep)){
+                 var curStart=Math.min(addedInterval.sp,current.sp);
+                    start=Math.min(start,curStart);
+                    var curEnd=Math.max(addedInterval.ep,end);
+                    end=Math.max(end,curEnd);
+                    overlapped=true;
+            }
+            else{
+                if(overlapped){
+                    result.push(new Interval(start,end));
+                    
+                    overlapped=false;
+                }
+              
+                    result.push(current);
+                
+            }
+           i++;
+        }
+        return result;
+
+    }
+    class Interval{
+        sp:Number;
+        ep:Number;
+        constructor(sp,ep){
+            this.sp=sp;
+            this.ep=ep;
+        }
+    }
+    var intervals = [
+        new Interval(-4,-1),
+        new Interval(0,2),
+        new Interval(3,6),
+        new Interval(7,9),
+        new Interval(11,12),
+        new Interval(14,17)
+    ];
+    var interval = new Interval(-1,6);
+    console.log(combineIntervals(interval,intervals));
+    return "Combining Intervals";
+}
+
     getSubStrings=function(){
         function getStrings(sentence, words){
             var result=[];

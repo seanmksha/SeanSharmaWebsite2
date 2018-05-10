@@ -44,7 +44,7 @@ body {
         max-height: 100%;
     }
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:959px){
     body{
         background: url("/images/Background.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -322,7 +322,7 @@ padding-right:10px;}
     border:1px solid rgba(0,0,0,1);
 }
 .navbar-default .navbar-toggle {
-  float: left; /* Move navbar toggle to left */
+/* Move navbar toggle to left */
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #f00; /* Changes regular toggle color */
@@ -403,5 +403,5 @@ h1,h2{
 }
 .navbar-toggler, .navbar-toggler:focus{
     border:1px solid rgb(230,230,230);
-    outline-color: none !important;
+     outline: none !important;
 }

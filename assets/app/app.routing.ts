@@ -17,7 +17,7 @@ import { KrysTowersComponent } from './websites/KrysTowers/Krys-Towers.component
 import { ProjectsComponent } from './projects/projects.component';
 import { WebApplicationsComponent } from './webapplications/webapplications.component';
 
-
+import {ContactComponent} from './Contact/contact.component';
 
 import { AboutComponent } from './about/about.component';
 import { IntroComponent } from './home/intro.component';
@@ -43,7 +43,8 @@ import {WebsitesComponent} from './websites/websites.component';
     {path:'Projects/Stock-Market-Searcher-Android',component:StockMarketSearcherAndroidComponent},
     {path:'Projects/Video-Highlight-Creator',component:VideoHighlightComponent},
     {path:'SandBox',component:SandBoxComponent},
-    {path:'Resume',component:ResumeComponent}
+    {path:'Resume',component:ResumeComponent},
+    {path:'Contact',component:ContactComponent}
     
     
 ];

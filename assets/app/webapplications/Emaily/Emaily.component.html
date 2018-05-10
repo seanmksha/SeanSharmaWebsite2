@@ -14,12 +14,14 @@
                         <img [ngClass]="['width500']" src="/images/emaily/emaily700x330.jpg">
                 </div>
                 <br>
-                <p>{{paragraphs[0]}}</p>
+                <p>{{mainClause}}</p>
                 <br>
-                <br>
-                <p>
-
-                  </p>
+                <br><br>
+                <div *ngFor="let paragraph of paragraphs">
+                    <h2>{{paragraph.title}} </h2>
+                    <p>{{paragraph.message}}</p>
+                    <br><br>
+                </div>
         </div>
         </div>
     </div>
