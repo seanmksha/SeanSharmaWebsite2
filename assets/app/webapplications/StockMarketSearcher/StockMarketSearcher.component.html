@@ -14,12 +14,17 @@
                             <img [ngClass]="['width500']" src="/images/stockmarketsearcher/preview700x330.png">
                     </div>
                     <br>
-                    <p>The stock market searcher uses a REST API to fetch data on stock market prices.  It includes auto-complete for stock symbols, and charts about the stock history.</p>
+                   
+                   <p>{{mainClause}}</p>
                     <br>
                     <br>
-                    <p>
-    
-                      </p>
+                    <div *ngFor="let paragraph of paragraphs">
+                        <h2> {{paragraph.title}}</h2>
+                        <p>
+                            {{paragraph.message}}
+                            </p>
+                            <br><br>
+                    </div>
             </div>
             </div>
         </div>

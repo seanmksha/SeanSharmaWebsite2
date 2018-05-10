@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var compression = require('compression');
 var appRoutes = require('./routes/app');
 
 var app = express();
@@ -30,6 +30,9 @@ app.use(function(req, res, next) {
 
 app.use('/', appRoutes);
 
+
+app.use(compression()); //use compression 
+app.use(express.static(path.join(__dirname, 'public')));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   res.render('index');

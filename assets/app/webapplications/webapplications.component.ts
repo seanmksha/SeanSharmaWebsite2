@@ -33,10 +33,11 @@ export class WebApplicationsComponent{
     thisData=[
         new previewData(0,this.stockMarketHeader,this.stockMarketText,this.stockMarketImage,this.stockMarketLink)    
         ,
-        new previewData(1,this.emailyHeader,this.emailyText,this.emailyImage,this.emailyLink)    
+        new previewData(1,this.messageBoardHeader,this.messageBoardText,this.messageBoardImage,this.messageBoardLink)    
         ,
-        new previewData(2,this.messageBoardHeader,this.messageBoardText,this.messageBoardImage,this.messageBoardLink)    
+        new previewData(2,this.emailyHeader,this.emailyText,this.emailyImage,this.emailyLink)    
         ,
+        
         new previewData(3,this.newsWatcherHeader,this.newsWatcherText,this.newsWatcherImage,this.newsWatcherLink)    
         
     ];

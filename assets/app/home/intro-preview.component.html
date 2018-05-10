@@ -3,10 +3,12 @@
 <div class="previewContainer">
 <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" *ngFor="let element of images">
+                                       
+         <a [routerLink]="[element.linkPrefix]">
          <div class="intro-item">
-                <img src="{{element}}">
+                <img src="{{element.image}}">
             </div>
-        
+        </a>
     </div>
   
 </div>

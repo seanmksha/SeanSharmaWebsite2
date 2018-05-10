@@ -8,10 +8,27 @@ import { AfterViewInit } from '@angular/core';
 })
 export class IntroPreviewComponent implements AfterViewInit{
     images=[
-        `/images/krystowers/krystowers700x330.png`,
-        `/images/stockmarketsearcher/preview700x330.png`,
-        `/images/emaily/emaily700x330.jpg`,
-        `/images/Polyseum/Polyseum700x330.jpg`
+       {
+           "title":`Websites`,
+       "linkPrefix":`/Websites/`,
+       "link":``,
+       "image": `/images/krystowers/krystowers700x330.png`},
+       {
+           "title":`Web Applications`,
+           "linkPrefix":`/Web-Applications/`,
+           "link":``,
+           "image": `/images/stockmarketsearcher/preview700x330.png`},
+       {
+           "title":`Web Applications`,
+           "linkPrefix":`/Web-Applications/`,
+           "link":``,
+           "image": `/images/emaily/emaily700x330.jpg`},
+       {
+           "title":`Projects`,
+           "linkPrefix":`/Projects/`,
+           "link":``,
+           "image": `/images/Polyseum/Polyseum700x330.jpg`},
+
     ];
     ngAfterViewInit() {
         $(".intro-item img").hover(
