@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import {trigger, animate, style, group, animateChild, query, stagger, transition} from '@angular/animations';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import {Title, Meta} from '@angular/platform-browser';
-
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
+import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
+import { map, filter, catchError, mergeMap } from 'rxjs/operators';
 export const routerTransition = trigger('routerTransition', [
   transition('* <=> *', [
     /* order */
