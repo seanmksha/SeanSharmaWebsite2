@@ -1,3 +1,5 @@
+import { NotFoundComponent } from './NotFound/NotFound.component';
+import { SidebarComponent } from './MainSections/SideBar.component';
 import { ResumeComponent } from './Resume/Resume.component';
 import { FooterComponent } from './MainSections/Footer.component';
 import { PreviewMainComponent } from './MainSections/PreviewMain.component';
@@ -16,7 +18,7 @@ import { KrysTowersComponent } from './websites/KrysTowers/Krys-Towers.component
 import { ProjectsSidebarComponent } from './projects/projects-sidebar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { WebApplicationsComponent } from './webapplications/webapplications.component';
-import { WebApplicationsSidebarComponent } from './webapplications/webapplications-siderbar.component';
+import { WebApplicationsSidebarComponent } from './webapplications/webapplications-sidebar.component';
 import { WebsitesSidebarComponent } from './websites/websites-sidebar.component';
 import { IntroPreviewComponent } from './home/intro-preview.component';
 import { NewsWatcherComponent } from './webapplications/NewsWatcher/NewsWatcher.component';
@@ -30,6 +32,8 @@ import {HttpModule} from "@angular/http";
 import {WebsitesComponent} from "./websites/websites.component"
 import {AboutComponent} from "./about/about.component"
 import {ContactComponent} from "./Contact/contact.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -57,11 +61,13 @@ import {ContactComponent} from "./Contact/contact.component";
         VideoHighlightComponent,
         SandBoxComponent,
         PreviewMainComponent,
+        SidebarComponent,
         FooterComponent,
         ResumeComponent,
-        ContactComponent
+        ContactComponent,
+        NotFoundComponent
          ],
-    imports: [BrowserModule,
+    imports: [BrowserModule,BrowserAnimationsModule,
     routing,
     HttpModule
     ],

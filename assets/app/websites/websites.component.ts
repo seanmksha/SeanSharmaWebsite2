@@ -1,6 +1,11 @@
 import { previewData } from './../dataStructures/previewData';
+import {sidebarData} from './../dataStructures/sidebarData';
 import {Component} from "@angular/core";
 import { CommonModule } from "@angular/common";
+
+
+
+
 @Component({
     selector:'app-websites',
     templateUrl:'websites.component.html'
@@ -33,6 +38,11 @@ export class WebsitesComponent{
         ,
         new previewData(2,this.headparsersheader,this.headparserstext,this.headparsersimage,this.headparsersLink)
         
+    ];
+    sideData=[
+        new sidebarData("Krys Towers Web Development", "Krys-Towers-Web-Development"),
+        new sidebarData("850 Warwick Apartments", "850-Warwick-Avenue-Apartments"),
+        new sidebarData("Head Parsers Gaming", "Head-Parsers-Gaming")
     ];
    
 }

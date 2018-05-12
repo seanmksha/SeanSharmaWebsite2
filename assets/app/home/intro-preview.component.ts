@@ -31,8 +31,9 @@ export class IntroPreviewComponent implements AfterViewInit{
 
     ];
     ngAfterViewInit() {
-        $(".intro-item img").hover(
+        $(".intro-item").hover(
             function(){
+                
                 $(this).filter(':not(:animated)').animate({
                    top:'-40px'
                 },'normal');

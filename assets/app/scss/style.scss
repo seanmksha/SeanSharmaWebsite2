@@ -34,6 +34,29 @@ body {
     background-size:80% auto;
     max-width:100%;
 }
+
+.dark-overlay{
+    position: absolute;
+    z-index:1000;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,.6);
+    opacity:0;
+ color:rgb(230,230,230);
+ text-align: center;
+ vertical-align: middle;
+ line-height: 150px;
+ font-size:30px;
+ border:1px solid white;
+ transition:0.3s all ease-in;
+}
+.dark-overlay:hover{
+    opacity:1;
+}
+/*.intro-item{
+    position:relative;
+}*/
+
 .width500{
     max-width: 100%;
         max-height: 100%;
@@ -219,10 +242,13 @@ padding-right:10px;}
     
 }
 
-.intro-item img{
+.intro-item{
     position:relative;
-    max-width:100%;
+
    
+}
+.intro-item img{
+    max-width:100%;
 }
 .image-cropper img{
     height: auto;
@@ -372,8 +398,10 @@ padding-right:10px;}
 }
 .footer{
     margin-top:300px;
+    width:100%;
     padding-top:30px;
     padding-bottom:20px;
+    bottom:0;
   border-top:1px solid black;
     color:white;
     background-color:rgb(10,10,10);

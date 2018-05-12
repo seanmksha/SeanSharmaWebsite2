@@ -1,4 +1,5 @@
 import { previewData } from './../dataStructures/previewData';
+import { sidebarData } from './../dataStructures/sidebarData';
 import {Component} from "@angular/core";
 @Component({
     selector:'app-webapplications',
@@ -40,5 +41,11 @@ export class WebApplicationsComponent{
         
         new previewData(3,this.newsWatcherHeader,this.newsWatcherText,this.newsWatcherImage,this.newsWatcherLink)    
         
+    ];
+    sideData=[
+        new sidebarData("Stock Market Searcher", "Stock-Market-Searcher"),
+        new sidebarData("Message Board", "Message-Board"),
+        new sidebarData("Emaily", "Emaily"),
+        new sidebarData("News Watcher", "News Watcher")
     ];
 }
