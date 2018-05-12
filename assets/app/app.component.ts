@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import {trigger, animate, style, group, animateChild, query, stagger, transition} from '@angular/animations';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import {Title, Meta} from '@angular/platform-browser';
-import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
-import { map, filter, catchError, mergeMap } from 'rxjs/operators';
+import { map, filter, scan } from 'rxjs/operators';
+import { Observable, Subject, asapScheduler, pipe, of, from,
+  interval, merge, fromEvent } from 'rxjs';
+  import 'rxjs/add/operator/filter';
+  import 'rxjs/add/operator/mergeMap';
 export const routerTransition = trigger('routerTransition', [
   transition('* <=> *', [
     /* order */
@@ -61,12 +64,13 @@ export class AppComponent {
     private meta:Meta
   ) {}
   ngOnInit() {
-    this.router.events.filter((event: Event) => event instanceof NavigationEnd)
-    .map(() => this.activatedRoute)
-    .map((route) => {
+    this.router.events
+    .filter((event) => event instanceof NavigationEnd).pipe(
+    map(() => this.activatedRoute)).pipe(
+    map((route) => {
       while (route.firstChild) route = route.firstChild;
       return route;
-    })
+    }))
     .filter((route) => route.outlet === 'primary')
     .mergeMap((route) => route.data)
     .subscribe((event) => {
