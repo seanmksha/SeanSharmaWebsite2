@@ -1,4 +1,48 @@
+export function getClosedIntervals(){
+    
+    function combineIntervals(addedInterval,intervals){
+        var result=[];
+        var i=0;
+        var start=Number.MAX_VALUE;
+        var overlapped=false;
+        while(i<intervals.length){
+            var current= intervals[i];
+            if(addedInterval.sp<=current.ep&& addedInterval.sp>current.sp){
+                if(!overlapped){
+                    start=Math.min(addedInterval.sp,current.sp);
+                    overlapped=true;
+                }
+                else{
 
+                }
+            }
+            else{
+                if(overlapped){
+                    overlapped=false;
+                    var end =Math.max(addedInterval.ep,current.ep);
+                }
+                result.push(current);
+            }
+
+        }
+    }
+    class Interval{
+        sp:Number;
+        ep:Number;
+        constructor(sp,ep){
+            this.sp=sp;
+            this.ep=ep;
+        }
+    }
+    var intervals = [
+        new Interval(-4,-1),
+        new Interval(0,2),
+        new Interval(3,6),
+        new Interval(7,9),
+        new Interval(11,12),
+        new Interval(14,17)
+    ];
+}
 export function getSubStrings(){
     function getStrings(sentence, words){
         var result=[];
@@ -37,7 +81,7 @@ export function getSubStrings(){
             var matches=true;
             console.log(wordsToFreq);
             console.log(wordsToFreq.entries());
-            for (let [key , value] of wordsToFreq.entries()) {
+         /*   for (let [key , value] of wordsToFreq.entries()) {
               
                 console.log("called");
                 var wordFreq=Number(value);
@@ -52,7 +96,7 @@ export function getSubStrings(){
                     matches=false;
                     break;
                 }
-            }
+            }*/
             if(matches==true){
                 result.push(sentence.substring(startingIdx,endingIdx));
             }
