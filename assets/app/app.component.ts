@@ -61,8 +61,7 @@ export class AppComponent {
     private meta:Meta
   ) {}
   ngOnInit() {
-    this.router.events
-    .filter((event) => event instanceof NavigationEnd)
+    this.router.events.filter((event: Event) => event instanceof NavigationEnd)
     .map(() => this.activatedRoute)
     .map((route) => {
       while (route.firstChild) route = route.firstChild;

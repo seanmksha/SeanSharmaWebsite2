@@ -1,138 +1,11 @@
 import {Component} from "@angular/core";
-
+import {getClosedIntervals,getSubStrings} from "./sandbox2";
 @Component({
     selector:'app-sandbox',
     templateUrl:'sandbox.component.html'
 })
 export class SandBoxComponent{
-
-getClosedIntervals=function(){
-    
-    function combineIntervals(addedInterval,intervals){
-        var result=[];
-        var i=0;
-        var start=addedInterval.sp;
-        var end = addedInterval.ep;
-        var overlapped=false;
-        //0 2
-        //-6,4
-        while(i<intervals.length){
-            var current= intervals[i];
-            if((addedInterval.sp<=current.ep&& addedInterval.sp>=current.sp)||(addedInterval.ep<=current.ep)&&
-            (addedInterval.ep>=current.sp)||(addedInterval.sp<=current.sp&&addedInterval.ep>=current.ep)){
-                 var curStart=Math.min(addedInterval.sp,current.sp);
-                    start=Math.min(start,curStart);
-                    var curEnd=Math.max(addedInterval.ep,end);
-                    end=Math.max(end,curEnd);
-                    overlapped=true;
-            }
-            else{
-                if(overlapped){
-                    result.push(new Interval(start,end));
-                    
-                    overlapped=false;
-                }
-              
-                    result.push(current);
-                
-            }
-           i++;
-        }
-        return result;
-
-    }
-    class Interval{
-        sp:Number;
-        ep:Number;
-        constructor(sp,ep){
-            this.sp=sp;
-            this.ep=ep;
-        }
-    }
-    var intervals = [
-        new Interval(-4,-1),
-        new Interval(0,2),
-        new Interval(3,6),
-        new Interval(7,9),
-        new Interval(11,12),
-        new Interval(14,17)
-    ];
-    var interval = new Interval(-1,6);
-    console.log(combineIntervals(interval,intervals));
-    return "Combining Intervals";
-}
-
-    getSubStrings=function(){
-        function getStrings(sentence, words){
-            var result=[];
-            if ( words.length===0 ){ 
-                return result;
-            }
-            var wordsToFreq = new Map();
-            for(let i=0; i<words.length;i++){
-                if(wordsToFreq.has(words[i])){
-                    let freq=Number(wordsToFreq.get(words[i]));
-                    freq++;
-                    wordsToFreq.set(words[i],freq+1);
-                }
-                else{
-                    wordsToFreq.set(words[i],1);
-                }
-            }
-            for(let i=0; i<sentence.length-words.length*words[0].length;i++){
-                var startingIdx=i;
-                var endingIdx=i+words.length*words[0].length;
-                var sentenceToFreq= new Map();
-                for(let j=startingIdx;j<endingIdx;j+=words[0].length){
-                    
-                    var word= sentence.substring(j,j+words[0].length);
-                   
-                    if(sentenceToFreq.has(word)){
-                        let freq = Number(sentenceToFreq.get(word));
-                        freq++;
-                        sentenceToFreq.set(word,freq);
-                    }
-                    else{
-                        sentenceToFreq.set(word,1);
-                    }
-                  
-                }
-                var matches=true;
-                console.log(wordsToFreq);
-                console.log(wordsToFreq.entries());
-                for (let [key , value] of wordsToFreq) {
-                  
-                    console.log(called);
-                    var wordFreq=Number(value);
-                 
-                    if(!sentenceToFreq.has(key)){
-                        matches=false;
-                        break;
-                    }
-                    var sentFreq= Number(wordsToFreq.get(key));
-                    console.log(key+" "+sentFreq+" "+wordFreq);
-                    if(sentFreq!=wordsFreq){
-                        matches=false;
-                        break;
-                    }
-                }
-                if(matches==true){
-                    result.push(sentence.substring(startingIdx,endingIdx));
-                }
-
-
-            }
-            return result;
-        }
-        var sentence="amanaplanacanal";
-        var word= [
-            "can",
-            "apl",
-            "ana"
-        ];
-        console.log(getStrings(sentence,word));
-        return "getSubString called";
-    }
+   /*
     getSubsetInOrderPhrase=function(){
          function subsetInOrderPhrase(words, keywords){
              //toDo
@@ -178,7 +51,6 @@ getClosedIntervals=function(){
          "order",//1
          "to",//2
          "save",//3
-         
          "the","program","he","had","to","order","it", "to","save","the","order"];
 
          console.log(subsetInOrderPhrase(words,keywords));
@@ -570,5 +442,5 @@ getClosedIntervals=function(){
           maxStack.pop();
       console.log("called");
           return "getMax called";
-      };
+      };*/
 }
