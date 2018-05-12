@@ -67,7 +67,7 @@ export class AppComponent {
     this.router.events
     .filter((event) => event instanceof NavigationEnd).pipe(
     map(() => this.activatedRoute)).pipe(
-    map((route) => {
+    map((route: any) => {
       while (route.firstChild) route = route.firstChild;
       return route;
     }))
