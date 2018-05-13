@@ -8,7 +8,7 @@ import {Component} from "@angular/core";
 export class WebApplicationsComponent{
     LinkPrefix=`/Web-Applications/`;
     mainHeader=`Web Applications`;
-    mainParagraph=`Web applications using HTML, CSS, Javascript, NodeJS, Express, Angular, React-Redux, MongoDB, MySQL, and/or PHP`;
+    mainParagraph=`Web applications using HTML, CSS, Javascript, NodeJS, Express, Angular, React-Redux, MongoDB, MySQL, and/or PHP.`;
 
     stockMarketHeader=`Stock Market Searcher`;
     stockMarketText=`An application where the user can search for stock market information and trends.`;

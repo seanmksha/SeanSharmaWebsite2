@@ -14,10 +14,10 @@ import { CommonModule } from "@angular/common";
 export class WebsitesComponent{
     LinkPrefix=`/Websites/`;
     mainHeader=`Websites`;
-    mainParagraph=` These are websites built using html, css, javascript, php, Angular or WordPress using custom themes developed by Sean Sharma.
+    mainParagraph=` These are websites built using HTML, CSS, Javascript, PHP, Angular, and/or WordPress.
     `;
     krystowersheader=`Krys Towers Web Development`;
-    krystowerstext=`Krys Towers Web Development is a company Sean Sharma created for web development freelancing jobs.`;
+    krystowerstext=`Krys Towers Web Development is a website created for Sean Sharma's freelancing jobs.`;
     krystowersimage=`/images/krystowers/krystowers700x330.png`;
     krystowersLink=`Krys-Towers-Web-Development`;
     warwickheader=`850 Warwick Apartments`;
