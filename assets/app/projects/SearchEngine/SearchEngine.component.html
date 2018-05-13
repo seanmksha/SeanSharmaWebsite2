@@ -14,40 +14,39 @@
                         <img class="width500" src="{{images[1]}}">
                 </div>
                 <b>Web Crawler</b>
-    <p>The web crawler uses crawler4j to gather statistics off of websites.  It reads the robots.txt and uses HTTP Requests to gather information.In this case it's gathering file sizes, http statuses encounter, content types, unique links, links, and outgoing links off of websites.  It also downloads the webpages found that are html file types so that we can index them.</p>
+    <p>The web crawler uses crawler4j to gather statistics off of websites.  It reads the robots.txt and uses HTTP Requests to gather information. It gathers file sizes, http status encounters, content types, unique links, links, and outgoing links off of websites.  It also downloads the webpages found that are specifically html pages so that we can index them.</p>
       <b>Search Engine</b>
      <p>I took the downloaded files and stored them on an ubuntu server.  I used solr to index the files onto a database for searching.</p>
-      <p>Finally, using an solr php client I set up a local webpage to search the crawled information.  Showing the top ten results for solr's default ranking algorithm.</p>
-      <p>Using java to read the html's I extracted the links and mapped them to html's in the database.  Using Networkx in Python I took the file generated about the extracted links and calculated page ranks for all of the pages.  The page's values were put into Solr as a sorting method.</p>
-      <b>SpellCorrection</b><br>
-      <p>I used norvig's php spell correction file  and the Simple HTML DOM php program.  Then, I edited the php program provided by norvig so that it read 
+      <p>Using an solr php client I set up a local webpage to search the crawled information.  Showing the top ten results for solr's default ranking algorithm.</p>
+      <p>Using a program I made to read the HTMLs, I extracted the links and mapped them to html's in the database.  Using Networkx in Python I took the file generated about the extracted links and calculated page ranks for all of the pages.  The pageranks of each webpage were put into Solr as a sorting method.</p>
+      <b>Spell Correction</b><br>
+      <p>I used norvig's php spell correction file and the Simple HTML DOM PHP library.  I edited the php program provided by norvig so that it read 
 each file from my html directory.  The simple HTML DOM Program took the source text and converted it all to plain text.  Next, I
 removed all of the tags from the plain text that were any displayed on the htmls.  Norvig's trained the set of correct words on the plain text by 
-counting the occurences and probability of each word occuring.  When a word was submitted during the query if the c parameter wasn't specified then the word was sent into spellcorrect.  
-If it was specified then the program ignores the spell correction and returns the results. In the case of more than one word in a query, 
+counting the occurences and probability of each word occuring.  When a word was submitted during the query, if the c parameter wasn't specified then the word was sent into spellcorrect.  
+If it was specified, then the program ignores the spell correction and returns the results. In the case of more than one word in a query, 
 the string is delimited into separate words.  Each word is separately put into the spell corrector, and then
 re-concatenated.  I handled spelling correct similar to google.  Some different ways of handling spelling correction were suggested (such as showing the uncorrected version's results first), but
-I figured it was safer to just copy the way google handles it.  If the returned spell corrected word is the same (case insensitive) as the original, then the query results are shown without a message.  If the spell
+I figured it was safer to just copy the way google handles it.  If the returned, spell corrected word is the same (case insensitive) as the original, then the query results are shown without a message.  If the spell
 correction and original are different then it shows the results with the corrected version. It displays a message asking the user saying that it's displaying the corrected version and
 asks the user if it wants instead search for the incorrect spelling with a link to the query with the c parameter set to ignore spell correction.</p>
 <b>
         <div class="headerContainer">
                 <img class="width500" src="{{images[3]}}">
         </div>
-Autocomplete </b><br> <p>I used solr's autocomplete functionality and the jquery autocomplete library.  First I followed the steps to setting up the fuzzylookup factory
-in the tutorial.  The only difference made, was that we set the count of suggestions to be 30 instead of 5.  This number didn't
+Autocomplete </b><br> <p>I used solr's autocomplete functionality and the jquery autocomplete library.  First I followed the steps to setting up the fuzzylookup factory.  I set the count of suggestions to be 30 instead of 5.  This number didn't
 cause a noticeable delay, and provided a more than sufficient number of suggestions that could be parsed by my system and filtered.
 I also utilized the autocomplete jquery component using ajax calls, the call retrieves the suggestions for the last word that
 was previously typed.  It pretends the current string before the last word to the suggestions for the last word.  Words are
 filtered out if they contain nonalphanumerics.  Words are also filtered out if they contain a stop word, unless the stop word
 is part of the pre-pended string that was already typed by the user. I used http://www.ranks.nl/stopwords as my source for stop words, putting all of the words into an 
-array.  I removed "go",since Pokemon Go can be a proper noun.  The non-pretended string was split by their whitespaces,
+array.  I removed "go",since Pokemon Go can be a proper noun.  The non-prepended string was split by their whitespaces,
 and tested agaisnt the array.  The array is sliced to only include the first 5 (top 5) words.  The (max 5) suggestions are showed and pretended to the already-typed
 words.
       </p>
 
-    <b>Snippets:</b><br><p>  First, the result is opened locally.  We obtained the text between the head tags, and then the body tags.  We used the simple HTML Dom php program to parse the
-content into plain text, and We removed tags.  Originally we split each sentence into an array; however, this approach had performance issues.  We optimized
+    <b>Snippets:</b><br><p>  First, the result is opened locally.  I obtained the text between the head tags, and then the body tags.  I used the simple HTML Dom php program to parse the
+content into plain text, and removed tags.  Originally I split each sentence into an array; however, this approach had performance issues.  I optimized
 the algorithm to instead search sentence by sentence using the next occurence of a ". " (period with a space after).  In the first check, it checks to see 
 that the sentence contains all of the query words, and returns the first sentence that does.  The snippet is found if there exists such a sentence; however,
 if there doesn't it starts from the beginning.  This time it returns the sentence as the valid snippet if it finds one of the terms in the sentence.  If none

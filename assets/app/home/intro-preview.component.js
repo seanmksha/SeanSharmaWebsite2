@@ -25,7 +25,7 @@ var IntroPreviewComponent = /** @class */ (function () {
                 "title": "Projects",
                 "linkPrefix": "/Projects/",
                 "link": "",
-                "image": "/images/Polyseum/Polyseum700x330.jpg"
+                "image": "/images/polyseum/Polyseum700x330.jpg"
             },
         ];
     }

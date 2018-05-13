@@ -11,7 +11,7 @@ export class NewsWatcherComponent{
 new Paragraph
 (
 `Authentication`,
- `For authentication, I use the passport middleware to verify that a user is logged in as well as save data to the mongoDB.`
+ `For authentication, I use the passport middleware to verify that a user is logged in and save data to the mongoDB.`
 ),
 new Paragraph(
     `User Preferences`,

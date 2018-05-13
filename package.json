@@ -7,7 +7,8 @@
     "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
     "web": "del-cli public/js/app && webpack-dev-server --config webpack.config.dev.js --progress --profile --watch --inline",
     "sass": "node-sass sass/ -o stylesheets/",
-    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'"
+    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'",
+    "clean":"del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'"
   },
   "dependencies": {
     "@angular/animations": "^6.0.1",
