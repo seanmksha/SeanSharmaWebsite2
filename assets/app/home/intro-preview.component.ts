@@ -17,7 +17,7 @@ export class IntroPreviewComponent implements AfterViewInit{
            "title":`Web Applications`,
            "linkPrefix":`/Web-Applications/`,
            "link":``,
-           "image": `/images/stockmarketsearcher/preview700x330.png`},
+           "image": `/images/stockmarketsearcher/Preview700x330.jpg`},
        {
            "title":`Web Applications`,
            "linkPrefix":`/Web-Applications/`,

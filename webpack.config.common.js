@@ -23,8 +23,8 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [{ loader: 'raw-loader' }]
-            },
-            
+            }
+            ,
             {
                 test: /\.scss$/,
                 use: [{
@@ -38,7 +38,7 @@ module.exports = {
                  //   'style-loader', // backup loader when not building .css file
                    // 'css-loader!sass-loader' // loaders to preprocess CSS
             //    )
-            }
+           }
         ],
         exprContextCritical: false
 

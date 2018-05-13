@@ -75,6 +75,11 @@ html {
       margin-top: 40px;
     }
   }
+  @media screen and (min-width:481px){
+    .lb{
+      display:none;
+    }
+  }
   @media screen and (max-width: 480px) {
     .intro-item {
       margin-top: 40px;
@@ -276,6 +281,18 @@ html {
     .nav-divider {
       padding-left: 0px;
       padding-right: 0px;
+    }
+  }
+  @media screen and (max-width:480px){
+    .introRow{
+      margin-top:120px;
+     ;
+    }
+    .image-cropper img{
+      margin-left:20px;
+    }
+    p{
+      line-height:1.6;
     }
   }
   .introRow h1 {
