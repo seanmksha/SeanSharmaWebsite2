@@ -22,13 +22,13 @@ export class WebApplicationsComponent{
 
 
     messageBoardHeader=`Message Board`;
-    messageBoardText=`An application that has email verification for newly registered users with authentication and acts as a simple message board`;
+    messageBoardText=`An application that allows authenticated users to post on a community message board.`;
     messageBoardImage=`/images/messageboard/MessageBoard700x330.jpg`;
     messageBoardLink=`Message-Board`;
 
 
     newsWatcherHeader=`News Watcher`;
-    newsWatcherText=`An application where users can pick categories and get news updates from the New York Times`;
+    newsWatcherText=`An application where users can pick filters and get filtered news updates from the New York Times.`;
     newsWatcherImage=`/images/newswatcher/NewsWatcher700x440.png`;
     newsWatcherLink=`News-Watcher`;
     thisData=[

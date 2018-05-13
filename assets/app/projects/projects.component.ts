@@ -22,13 +22,13 @@ export class ProjectsComponent{
 
 
    imageCompressorHeader=`JPEG/JPEG2000 Image Compressor`;
-   imageCompressorText=`An application with an authentication system and acts as a simple message board.`;
+   imageCompressorText=`A program that uses JPEG Compression techniques to compress images given a quality %.`;
    imageCompressorImage=`/images/imagecompressor/Compression.jpg`;
    imageCompressorLink=`Image-Compressor`;
 
 
     stockMarketHeader=`Stock Market Searcher Android App`;
-    stockMarketText=`An android application version of the stock market web application`;
+    stockMarketText=`An android application version of the stock market searcher web application.`;
     stockMarketImage=`/images/stockmarketandroid/StockMarketAndroid.jpg`;
     stockMarketLink=`Stock-Market-Searcher-Android`;
 
