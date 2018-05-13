@@ -8,7 +8,7 @@ import {Component} from "@angular/core";
 export class ProjectsComponent{
     LinkPrefix=`/Projects/`
     mainHeader=`Projects`;
-    mainParagraph=`Gaming or technical projects created by Sean Sharma or a group that Sean Sharma participated in`;
+    mainParagraph=`Gaming or technical projects developed in Java, C++, Javascript, and/or PHP.`;
 
     polyseumHeader=`Polyseum`;
     polyseumText=`A multiplayer first-person shooter video game with knockback mechanics.`;
@@ -22,18 +22,18 @@ export class ProjectsComponent{
 
 
    imageCompressorHeader=`JPEG/JPEG2000 Image Compressor`;
-   imageCompressorText=`An application that has email verification for newly registered users with authentication and acts as a simple message board`;
+   imageCompressorText=`An application with an authentication system and acts as a simple message board.`;
    imageCompressorImage=`/images/imagecompressor/Compression.jpg`;
    imageCompressorLink=`Image-Compressor`;
 
 
     stockMarketHeader=`Stock Market Searcher Android App`;
-    stockMarketText=`An android application version of the stock market website`;
+    stockMarketText=`An android application version of the stock market web application`;
     stockMarketImage=`/images/stockmarketandroid/StockMarketAndroid.jpg`;
     stockMarketLink=`Stock-Market-Searcher-Android`;
 
     videoHighlightHeader=`Video Highlight Creator`;
-    videoHighlightText=`An application that takes in video files and extracts the most action-filled scenes`;
+    videoHighlightText=`An application that takes in video files and extracts the most action-filled scenes.`;
     videoHighlightImage=`/images/videohighlight/video1.png`;
     videoHighlightLink=`Video-Highlight-Creator`;
 
