@@ -5,9 +5,9 @@ var WebsitesComponent = /** @class */ (function () {
     function WebsitesComponent() {
         this.LinkPrefix = "/Websites/";
         this.mainHeader = "Websites";
-        this.mainParagraph = " These are websites built using html, css, javascript, php, Angular or WordPress using custom themes developed by Sean Sharma.\n    ";
+        this.mainParagraph = " These are websites built using HTML, CSS, Javascript, PHP, Angular, and/or WordPress.\n    ";
         this.krystowersheader = "Krys Towers Web Development";
-        this.krystowerstext = "Krys Towers Web Development is a company Sean Sharma created for web development freelancing jobs.";
+        this.krystowerstext = "Krys Towers Web Development is a website created for Sean Sharma's freelancing jobs.";
         this.krystowersimage = "/images/krystowers/krystowers700x330.png";
         this.krystowersLink = "Krys-Towers-Web-Development";
         this.warwickheader = "850 Warwick Apartments";

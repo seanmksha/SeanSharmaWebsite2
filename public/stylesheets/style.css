@@ -339,6 +339,7 @@ html {
     background: rgba(0, 0, 0, 0.95);
     margin-left: 10px;
     border: 1px solid black;
+    border-radius: 5px;
   }
   
   .navbar-default .navbar-toggle {
