@@ -31,7 +31,7 @@ import {WebsitesComponent} from './websites/websites.component';
         component:IntroComponent, 
         data:{
             state:'Home', 
-            title:'Web Developer | Sean Sharma',
+            title:'Sean Sharma | Full-Stack Web Developer',
             description:"Web Developer Sean Sharma's personal website showcasing work history, websites, web applications, and projects he's done in the past."
         }},
     {
