@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /.well-known/acme-challenge
+Disallow: /SandBox
+Disallow: /SandBox2
