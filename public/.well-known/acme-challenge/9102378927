@@ -1,0 +1,1 @@
+certbot certonly --webroot --agree-tos --no-eff-email --email seanmakosharma@gmail.com -w ./public -d www.seansharma.com -d seansharma.com
