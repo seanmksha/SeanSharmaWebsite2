@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var compression = require('compression');
 var appRoutes = require('./routes/app');
+
 var app = express();
 
 // view engine setup
