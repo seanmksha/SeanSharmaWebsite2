@@ -8,7 +8,8 @@ module.exports = {
         'app': './assets/app/main.ts'
     },
     plugins: [
-        new ExtractTextPlugin('./public/stylesheets/[name].css'),
+        new ExtractTextPlugin('./public/stylesheets/[name].css')
+        
     ],
     resolve: {
         extensions: ['.js', '.ts']

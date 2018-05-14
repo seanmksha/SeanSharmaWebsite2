@@ -8,7 +8,25 @@ var compression = require('compression');
 var appRoutes = require('./routes/app');
 
 var app = express();
-
+var compressor = require('node-minify');
+var promise= compressor.minify({
+  compressor: 'clean-css',
+  input: './public/stylesheets/style.css',
+  output: './public/stylesheets/style.min.css',
+  options: {
+    advanced: true, // set to false to disable advanced optimizations - selector & property merging, reduction, etc.
+    aggressiveMerging: true // set to false to disable aggressive merging of properties.
+  }
+});
+var promise2= compressor.minify({
+  compressor: 'clean-css',
+  input: './public/open-iconic/font/css/open-iconic-bootstrap.css',
+  output: './public/open-iconic/font/css/open-iconic-bootstrap.min.css',
+  options: {
+    advanced: true, // set to false to disable advanced optimizations - selector & property merging, reduction, etc.
+    aggressiveMerging: true // set to false to disable aggressive merging of properties.
+  }
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
