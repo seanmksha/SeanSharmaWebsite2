@@ -27,6 +27,8 @@ var promise2= compressor.minify({
     aggressiveMerging: true // set to false to disable aggressive merging of properties.
   }
 });
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
