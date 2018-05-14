@@ -9,7 +9,6 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('./public/stylesheets/[name].css')
-        
     ],
     resolve: {
         extensions: ['.js', '.ts']
@@ -25,8 +24,8 @@ module.exports = {
                 test: /\.css$/,
                 use: [{ loader: 'raw-loader' }]
             }
-            ,
-            {
+            
+           /* {
                 test: /\.scss$/,
                 use: [{
                     loader: "style-loader" // creates style nodes from JS strings 
@@ -34,12 +33,12 @@ module.exports = {
                     loader: "css-loader" // translates CSS into CommonJS 
                 }, {
                     loader: "sass-loader" // compiles Sass to CSS 
-                }]
+                }]*/
                // loader: ExtractTextPlugin.extract(
                  //   'style-loader', // backup loader when not building .css file
                    // 'css-loader!sass-loader' // loaders to preprocess CSS
             //    )
-           }
+           // }
         ],
         exprContextCritical: false
 
