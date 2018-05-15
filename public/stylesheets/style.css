@@ -50,7 +50,8 @@ html {
   }
   @media screen and (max-width: 959px) {
     body {
-      background: url("/images-build/Background.jpg") no-repeat center center fixed;
+      background-image: url("/images-build/BackgroundMobile.jpg");
+      background: url("/images-build/BackgroundMobile.jpg") no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
