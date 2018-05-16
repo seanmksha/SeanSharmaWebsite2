@@ -37,6 +37,7 @@ html {
   /*.intro-item{
       position:relative;
   }*/
+  .smaller{}
   .width500 {
     max-width: 100%;
     max-height: 100%;
