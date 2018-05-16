@@ -27,6 +27,7 @@ import { routing } from './app.routing';
 import { HeaderComponent } from './header.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from "./app.component";
 import {HttpModule} from "@angular/http";
 import {WebsitesComponent} from "./websites/websites.component"
@@ -67,7 +68,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ContactComponent,
         NotFoundComponent
          ],
-    imports: [BrowserModule,BrowserAnimationsModule,
+    imports: [
+        BrowserModule.withServerTransition({ appId: 'sean-sharma' }),
+        //BrowserModule,
+        BrowserAnimationsModule,
     routing,
     HttpModule
     ],

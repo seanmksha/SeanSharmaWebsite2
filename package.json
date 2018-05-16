@@ -8,7 +8,12 @@
     "web": "del-cli public/js/app && webpack-dev-server --config webpack.config.dev.js --progress --profile --watch --inline",
     "sass": "node-sass sass/ -o stylesheets/",
     "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'",
-    "clean": "del-cli assets/app/**/*.js assets/app/**/*.ngsummary.json assets/app/**/*.ngstyle.*"
+    "clean": "del-cli assets/app/**/*.js assets/app/**/*.ngsummary.json assets/app/**/*.ngstyle.*",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+    "serve:ssr": "node dist/server",
+    "build:client-and-server-bundles": "ng build --prod && ng run angular.io-example:server",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
+    
   },
   "dependencies": {
     "@angular/animations": "^6.0.1",
@@ -20,9 +25,11 @@
     "@angular/http": "^6.0.1",
     "@angular/platform-browser": "^6.0.1",
     "@angular/platform-browser-dynamic": "^6.0.1",
-    "@angular/platform-server": "^6.0.1",
+    "@angular/platform-server": "^6.0.2",
     "@angular/router": "^6.0.1",
     "@angular/upgrade": "^6.0.1",
+    "@nguniversal/express-engine": "^6.0.0",
+    "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
     "body-parser": "~1.15.2",
     "compression": "^1.7.2",
     "cookie-parser": "~1.4.3",
@@ -57,7 +64,7 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.19.1",
-    "ts-loader": "^2.0.3",
+    "ts-loader": "^2.3.7",
     "typescript": "^2.7.2",
     "webpack": "^3.12.0",
     "webpack-dev-server": "^2.11.2",
