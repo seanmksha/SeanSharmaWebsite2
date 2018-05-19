@@ -47,7 +47,7 @@ app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
   next();
 });
-
+app.use(require('prerender-node'));
 app.use('/', appRoutes);
 
 

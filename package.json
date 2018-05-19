@@ -13,7 +13,6 @@
     "serve:ssr": "node dist/server",
     "build:client-and-server-bundles": "ng build --prod && ng run angular.io-example:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
-    
   },
   "dependencies": {
     "@angular/animations": "^6.0.1",
@@ -41,6 +40,7 @@
     "jquery": "^3.3.1",
     "morgan": "~1.6.1",
     "node-minify": "^2.4.2",
+    "prerender-node": "^3.1.1",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.1.0",
     "rxjs-compat": "^6.1.0",
