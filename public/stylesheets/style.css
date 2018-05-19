@@ -1,9 +1,14 @@
 html {
     height: 100%;
-    overflow-y: scroll; /* has to be scroll, not auto */
-    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
   }
-  
+  @media screen and (max-width:1030px){
+    html {
+      height: 100%;
+      overflow-y: scroll; /* has to be scroll, not auto */
+      -webkit-overflow-scrolling: touch;
+    }
+  }
   body {
     font: 16px "Open Sans", sans-serif;
     background-color: #f2f2f2;
