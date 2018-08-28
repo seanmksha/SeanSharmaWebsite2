@@ -15,8 +15,5 @@ export class AboutComponent{
 paragraph2=
 `
 His hobbies include swimming, running, working out, playing with his pets, playing video games, learning new technologies, and of course programming. He resides in California enjoying life as a newly wed.<br>
-Currently, I spend a lot of my free time on leetcode. I participate in the weekly online programming contests to improve my algorithmic problem solving abilities, and solve problems daily for fun. I post my solutions with explanations in the discussion boards.
-<a href ="https://leetcode.com/seanmsha/" target="_blank">https://leetcode.com/seanmsha/</a>
-Example of solution explanation: <a href="https://leetcode.com/problems/all-possible-full-binary-trees/discuss/163433/Java-Recursive-Solution-with-Explanation" target="_blank">https://leetcode.com/problems/all-possible-full-binary-trees/discuss/163433/Java-Recursive-Solution-with-Explanation</a>
 `;
 }
