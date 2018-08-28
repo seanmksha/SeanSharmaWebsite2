@@ -14,6 +14,6 @@ export class AboutComponent{
 ` ;
 paragraph2=
 `
-His hobbies include swimming, running, working out, playing with his pets, playing video games, learning new technologies, and of course programming. He resides in California enjoying life as a newly wed.<br>
+His hobbies include swimming, running, working out, playing with his pets, playing video games, learning new technologies, and of course programming. He resides in California enjoying life as a newly wed.
 `;
 }
