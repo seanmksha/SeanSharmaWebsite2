@@ -14,6 +14,6 @@ export class AboutComponent{
 ` ;
 paragraph2=
 `
-My hobbies include swimming, running, working out, playing with his pets, playing video games, learning new technologies, and of course programming.
+My hobbies include swimming, running, working out, playing with my pets, playing video games, learning new technologies, and of course programming.
 `;
 }
